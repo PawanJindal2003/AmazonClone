@@ -1,35 +1,31 @@
 import React from "react";
 import "./Subtotal.css";
-import CurrencyFormat from "react-currency-format";
 import { useStateValue } from "./StateProvider";
 import { getBasketTotal } from "./reducer";
 import { useNavigate } from "react-router-dom";
+
 function Subtotal() {
   const navigate = useNavigate();
   const [{ basket }] = useStateValue();
+
+  const formatCurrency = (amount) => {
+    return new Intl.NumberFormat("en-IN", {
+      style: "currency",
+      currency: "INR",
+    }).format(amount);
+  };
+
   return (
     <div className="subtotal">
-      <CurrencyFormat
-        renderText={(value) => (
-          <>
-            <p>
-              Subtotal ({basket.length} items):
-              <strong>{value}</strong>
-            </p>
-            <small className="subtotal__gift">
-              <input type="checkbox" />
-              This order contains a gift
-            </small>
-          </>
-        )}
-        decimalScale={2}
-        value={getBasketTotal(basket)}
-        displayType={"text"}
-        thousandSeparator={true}
-        prefix={"₹"}
-      />
-
-      <button onClick={(event) => navigate("/payment")}>Checkout</button>
+      <p>
+        Subtotal ({basket.length} items):
+        <strong>{formatCurrency(getBasketTotal(basket))}</strong>
+      </p>
+      <small className="subtotal__gift">
+        <input type="checkbox" />
+        This order contains a gift
+      </small>
+      <button onClick={() => navigate("/payment")}>Checkout</button>
     </div>
   );
 }

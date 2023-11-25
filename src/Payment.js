@@ -5,7 +5,6 @@ import { Link, useNavigate } from "react-router-dom";
 import "./Payment.css";
 import { useStripe, useElements, CardElement } from "@stripe/react-stripe-js";
 import { getBasketTotal } from "./reducer";
-import CurrencyFormat from "react-currency-format";
 import axios from "./axios";
 import { db } from "./firebase";
 
@@ -22,6 +21,13 @@ function Payment() {
   const elements = useElements();
 
   const [{ user, basket }, dispatch] = useStateValue();
+
+  const formatCurrency = (amount) => {
+    return new Intl.NumberFormat("en-IN", {
+      style: "currency",
+      currency: "INR",
+    }).format(amount);
+  };
 
   const submitHandler = async (event) => {
     //do all the fancy stripe stuff
@@ -112,6 +118,7 @@ function Payment() {
           <div className="payment__items">
             {basket.map((item) => (
               <CheckoutProduct
+                key={item.id}
                 id={item.id}
                 title={item.title}
                 image={item.image}
@@ -131,14 +138,7 @@ function Payment() {
             <form onSubmit={submitHandler}>
               <CardElement onChange={changeHandler} />
               <div className="payment__priceContainer">
-                <CurrencyFormat
-                  renderText={(value) => <h3>Order Total: {value}</h3>}
-                  decimalScale={2}
-                  value={getBasketTotal(basket)}
-                  displayType={"text"}
-                  thousandSeparator={true}
-                  prefix={"₹"}
-                />
+                <h3>Order Total: {formatCurrency(getBasketTotal(basket))}</h3>
                 <button disabled={processing || disabled || succeeded}>
                   <span>{processing ? <p>Processing...</p> : "Buy Now"}</span>
                 </button>

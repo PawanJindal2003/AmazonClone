@@ -2,10 +2,18 @@ import React from "react";
 import "./Order.css";
 import moment from "moment";
 import CheckoutProduct from "./CheckoutProduct";
-import CurrencyFormat from "react-currency-format";
 
 function Order({ order }) {
   console.log("Rendering Order component for order:", order);
+
+  // Function to format currency
+  const formatCurrency = (amount) => {
+    return new Intl.NumberFormat("en-IN", {
+      style: "currency",
+      currency: "INR",
+    }).format(amount);
+  };
+
   return (
     <div className="order">
       <h2>Order</h2>
@@ -15,6 +23,7 @@ function Order({ order }) {
       </p>
       {order.data.basket?.map((item) => (
         <CheckoutProduct
+          key={item.id}
           id={item.id}
           title={item.title}
           image={item.image}
@@ -23,16 +32,9 @@ function Order({ order }) {
           hideButton
         />
       ))}
-      <CurrencyFormat
-        renderText={(value) => (
-          <h3 className="order__total">Order Total: {value}</h3>
-        )}
-        decimalScale={2}
-        value={order.data.amount}
-        displayType={"text"}
-        thousandSeparator={true}
-        prefix={"₹"}
-      />
+      <h3 className="order__total">
+        Order Total: {formatCurrency(order.data.amount)}
+      </h3>
     </div>
   );
 }
