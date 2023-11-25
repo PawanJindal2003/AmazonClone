@@ -2,10 +2,7 @@ import React from "react";
 import Product from "./Product";
 import "./Home.css";
 function Home() {
-  <head>
-    <title>Amazon</title>
-    <meta name="Amazon|Home" content="Customer's First Choice"/>
-  </head>;
+  
   return (
     <div className="home">
       <div className="home__container">

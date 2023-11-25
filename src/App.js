@@ -11,6 +11,7 @@ import Payment from "./Payment";
 import { Elements } from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
 import Orders from "./Orders";
+import Footer from "./Footer";
 function App() {
   <meta
     name="description"
@@ -52,6 +53,7 @@ function App() {
               <>
                 <Header />
                 <Home />
+                <Footer/>
               </>
             }
           />
@@ -62,6 +64,7 @@ function App() {
               <>
                 <Header />
                 <Orders />
+                <Footer/>
               </>
             }
           />
@@ -72,6 +75,7 @@ function App() {
               <>
                 <Header />
                 <Checkout />
+                <Footer/>
               </>
             }
           />
