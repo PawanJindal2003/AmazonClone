@@ -20,6 +20,7 @@ function Header() {
         <img
           className="header__logo"
           src="https://static.vecteezy.com/system/resources/previews/019/017/542/non_2x/amazon-logo-free-png.png"
+          alt=""
         />
       </Link>
       <div className="header__search">

@@ -12,6 +12,10 @@ import { Elements } from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
 import Orders from "./Orders";
 function App() {
+  <meta
+    name="description"
+    content="Learn design and code by building real apps with React and Swift. Complete courses about UI design, web and iOS development using Figma, CSS, React Hooks and SwiftUI."
+  />;
   const promise = loadStripe(
     "pk_test_51OD8LbSADQeb1tS0Cod90dJ6XrHoRio7FSvz0oDu2Gq1SjpyKiQTq0hIAD0admeEK8TUNGk75hRWyQUI0ZRPgqrL00eB5lmpGl"
   );

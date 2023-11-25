@@ -1,4 +1,4 @@
-import React, { Suspense, useState } from "react";
+import React, { useState } from "react";
 import "./Login.css";
 import { Link, useNavigate } from "react-router-dom";
 import { auth } from "./firebase";
@@ -12,7 +12,7 @@ function Login() {
     event.preventDefault();
     //firebase login systum
     auth
-      .createUserWithEmailAndPassword(email, password)
+      .signInWithEmailAndPassword(email, password)
       .then((auth) => {
         navigate("/");
       })

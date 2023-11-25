@@ -9,17 +9,13 @@ function CheckoutProduct({ id, title, price, rating, image, hideButton }) {
       type: "REMOVE_FROM_BASKET",
 
       id: id,
-      //   title: title,
-      //   image: image,
-      //   price: price,
-      //   rating: rating,
     });
   };
   return (
     <>
       <div className="checkoutProduct">
         <div>
-          <img className="checkoutProduct__image" src={image} />
+          <img className="checkoutProduct__image" src={image} alt="" />
         </div>
 
         <div className="checkoutProduct__info">
@@ -36,8 +32,8 @@ function CheckoutProduct({ id, title, price, rating, image, hideButton }) {
               ))}
           </div>
           {!hideButton && (
-                    <button onClick={removeItemHandler}>Remove from Basket</button>
-                )}
+            <button onClick={removeItemHandler}>Remove from Basket</button>
+          )}
         </div>
       </div>
     </>

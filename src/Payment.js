@@ -38,19 +38,22 @@ function Payment() {
         //paymentIntent = payment confirmation
 
         db.collection("users")
-          .doc(user?.id)
+          .doc(user?.uid)
           .collection("orders")
-          .doc(paymentIntent.uid)
+          .doc(paymentIntent.id)
           .set({
-            basket:basket,
+            //
+            basket: basket,
             amount: paymentIntent.amount,
-            created: paymentIntent.created,//will give timestamp when order was created
+            created: paymentIntent.created, //will give timestamp when order was created
           });
 
         setSucceeded(true);
         setError(null);
         setProcessing(false);
-
+        dispatch({
+          type: "EMPTY_BASKET",
+        });
         navigate("/orders");
       });
   };
