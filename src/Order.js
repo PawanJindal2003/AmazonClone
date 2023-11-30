@@ -33,7 +33,7 @@ function Order({ order }) {
         />
       ))}
       <h3 className="order__total">
-        Order Total: {formatCurrency(order.data.amount)}
+        Order Total: {formatCurrency(order.data.amount/100)}
       </h3>
     </div>
   );
