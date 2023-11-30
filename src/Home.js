@@ -62,6 +62,30 @@ function Home() {
             rating={4}
           />
         </div>
+
+        <div className="home__row">
+          <Product
+            id="123456"
+            title="MAGGI 2-Minute Instant Noodles, 840G (12 Pouches X 70G Each), Masala Noodles With Goodness Of Iron, Made With Choicest Quality Spices, Favourite Masala Taste, 840 Grams"
+            price={160}
+            image="https://m.media-amazon.com/images/I/81G0iD2cvDL._AC_UL320_.jpg"
+            rating={4}
+          />
+          <Product
+            id="123466"
+            title="MAGGI 2-Minute Special Masala Instant Noodles, 70 Grams (Pack Of 12)"
+            price={216}
+            image="https://m.media-amazon.com/images/I/819-YmJDe5L._AC_UL320_.jpg"
+            rating={5}
+          />
+          <Product
+            id="122456"
+            title="Ching's Just Soak Veg Hakka Noodles 140gm"
+            price={30}
+            image="https://m.media-amazon.com/images/I/61wbLlB+00L._AC_UL320_.jpg"
+            rating={3}
+          />
+        </div>
       </div>
     </div>
   );

@@ -1,11 +1,11 @@
 .footer {
-  padding-left: 10%;
-  padding-right: 10%;
   padding-top: 3%;
   background-color: #232f3e;
   color: white;
 }
 .footer__content {
+  margin-left: 15%;
+  margin-right: 15%;
   display: flex;
   justify-content: space-between;
 }
@@ -22,7 +22,7 @@
   margin-top: 2%;
 }
 .amazon__logo {
-  width: 76px;
+  width: 100px;
   padding-left: 50%;
   padding-top: 2%;
 }
@@ -31,7 +31,65 @@
   padding: 0.6em;
   font-size: small;
   display: flex;
+  justify-content: flex ;
+  flex-wrap: wrap;
+  margin-left: 15%;
+  margin-right: 15%;
+  text-align: right;
 }
+
 .countries > p {
-  padding:1%;
+  padding: 1%;
+}
+.moreOnAmazon {
+  background-color: #131a22;
+  padding-left: 15%;
+  padding-right: 15%;
+  display: flex;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  padding: 20px;
+}
+
+td {
+  padding: 12px;
+  text-align: left;
+  font-size: small;
+}
+
+table > tbody > tr > td > a {
+  color: #0066c0;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+table > tbody > tr > td > span {
+  color: #555;
+}
+
+.upper__tr td,
+.lower__tr td {
+  width: 15%;
+}
+
+table > tbody > tr > td > a:hover {
+  text-decoration: underline;
+}
+
+.copyright {
+  text-align: center;
+  padding: 20px;
+  background-color: #131a22;
+}
+
+.copyright__line1 {
+  margin: 5px 0;
+}
+
+.copyright__line2 {
+  margin: 10px 0;
 }

@@ -35,11 +35,7 @@ function Login() {
   return (
     <div className="login">
       <Link to="/">
-        <img
-          className="login__logo"
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/1024px-Amazon_logo.svg.png"
-          alt=""
-        />
+      <img className="login__logo" src="/loginLogo.png" alt="Black Logo" />
       </Link>
 
       <div className="login__container">
@@ -77,6 +73,18 @@ function Login() {
         <button className="login__registerButton" onClick={registerHandler}>
           Create your Amazon Account
         </button>
+      </div>
+
+      <div className="login__copyright">
+        <div class="login__copyright__line1">
+          <h6>Conditions of Use</h6>
+          <h6>Privacy Notes</h6>
+          <h6>Help</h6>
+        </div>
+
+        <div class="login__copyright__line2">
+          <h6>© 1996-2023, Ruby13.com, Inc. or its affiliates</h6>
+        </div>
       </div>
     </div>
   );

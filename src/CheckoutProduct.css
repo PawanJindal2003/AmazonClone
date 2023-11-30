@@ -3,25 +3,49 @@
   margin-top: 20px;
   margin-bottom: 20px;
 }
+
 .checkoutProduct__info {
   padding-left: 20px;
 }
+
 .checkoutProduct__info > button {
-  background-color: #a88734 #9c7e31 #846a29;
-  background: #f0c14b;
-  margin-top: 10px;
+  background: linear-gradient(to bottom, #f8e2a7, #f0c14b);
   color: #111;
-  border: 1px solid;
+  border: 1px solid #a88734;
+  padding: 8px 15px;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease, border 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-.checkoutProduct__image{
-    object-fit: contain;
-    height: 120px;
-    width: 120px;
+
+.checkoutProduct__info > button:hover {
+  background-color: #e0a13c;
 }
-.checkoutProduct__rating{
-    display: flex;
+
+.checkoutProduct__info > button:active {
+  transform: scale(0.95);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  border-color: #846a29;
 }
-.checkoutProduct__title{
-    font-size: 17px;
-    font-weight: 800;
+
+/* Customize the focus state */
+.checkoutProduct__info > button:focus {
+  outline: none; /* Remove the default focus outline */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2), 0 0 0 2px #f0c14b; /* Optional: Add a box-shadow and border for focus state */
+}
+
+.checkoutProduct__image {
+  object-fit: contain;
+  height: 120px;
+  width: 120px;
+}
+
+.checkoutProduct__rating {
+  display: flex;
+}
+
+.checkoutProduct__title {
+  font-size: 17px;
+  font-weight: 800;
 }

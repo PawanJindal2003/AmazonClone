@@ -82,7 +82,7 @@ function Payment() {
         //axios is for making or getting a request
         method: "post",
         //stripe expects the total in a currencies sub units
-        url: `/payments/create?total=${getBasketTotal(basket)}`,
+        url: `/payments/create?total=${getBasketTotal(basket)*100}`,
       });
       setClientSecret(response.data.clientSecret);
     };

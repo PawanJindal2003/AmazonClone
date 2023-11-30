@@ -16,10 +16,10 @@ function Header() {
 
   return (
     <div className="header">
-      <Link to="/">
+      <Link className='links' to="/">
         <img
           className="header__logo"
-          src="https://static.vecteezy.com/system/resources/previews/019/017/542/non_2x/amazon-logo-free-png.png"
+          src="/headerLogo.png"
           alt=""
         />
       </Link>
@@ -28,7 +28,7 @@ function Header() {
         <SearchIcon className="header__searchIcon" />
       </div>
       <div className="header__nav">
-        <Link to={!user && "/login"}>
+        <Link className='links' to={!user && "/login"}>
           <div onClick={authenticationHandler} className="header__option">
             <span className="header__optionLineOne">
               Hello {!user ? "Guest" : user.email}
@@ -38,7 +38,7 @@ function Header() {
             </span>
           </div>
         </Link>
-        <Link to="/orders">
+        <Link className='links' to="/orders">
           <div className="header__option">
             <span className="header__optionLineOne">Returns</span>
             <span className="header__optionLineTwo">& Orders</span>
@@ -48,7 +48,7 @@ function Header() {
           <span className="header__optionLineOne">Your</span>
           <span className="header__optionLineTwo">Prime</span>
         </div>
-        <Link to="/checkout">
+        <Link className='links' to="/checkout">
           <div className="header__optionBasket">
             <ShoppingBasketIcon />
             <span className="header__optionLineTwo header__basketCount">

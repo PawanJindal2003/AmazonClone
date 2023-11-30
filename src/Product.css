@@ -1,5 +1,5 @@
-.product{
-    display:flex;
+.product {
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
@@ -10,28 +10,53 @@
     max-width: auto;
     background-color: white;
     z-index: 1;
-}
-.product__rating{
+  }
+  
+  .product__rating {
     display: flex;
-}
-.product__info{
+  }
+  
+  .product__info {
     height: 100px;
     margin-top: 5px;
-}
-
-.product__price{
+  }
+  
+  .product__price {
     margin-top: 5px;
-}
-.product>button{
-    background: #f0c14b;
-    border-color: #a88734 #9c7e31 #846a29;
-    color:#111;
-    border: 1px solid;
+  }
+  
+  .product > button {
+    background: linear-gradient(to bottom, #f8e2a7, #f0c14b);
+    border: 1px solid #a88734;
+    border-radius: 4px;
+    color: #111;
+    padding: 10px 15px;
     margin-top: 10px;
-}
-.product>img{
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease, border 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .product > button:hover {
+    background-color: #e0a13c;
+  }
+  
+  .product > button:active {
+    transform: scale(1.05);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    border-color: #846a29; /* Darker border color when clicked */
+  }
+  
+  /* Customize the focus state */
+  .product > button:focus {
+    outline: none; /* Remove the default focus outline */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2), 0 0 0 2px #f0c14b; /* Optional: Add a box-shadow and border for focus state */
+  }
+  
+  .product > img {
     max-height: 200px;
     width: 100%;
     object-fit: contain;
     margin-bottom: 15px;
-}
+  }
+  

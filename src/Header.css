@@ -1,4 +1,5 @@
-.header{
+.header {
+    text-decoration: none;
     height: 60px;
     display: flex;
     align-items: center;
@@ -8,53 +9,77 @@
     z-index: 100;
 }
 
-.header__logo{
+.header__logo {
     width: 120px;
     object-fit: contain;
     margin: 0 20px;
     margin-top: 10px;
+    margin-bottom: 9px;
 }
-.header__search{
+
+.header__search {
     display: flex;
-    flex:1;
+    flex: 1;
     align-items: center;
     border-radius: 24px;
 }
-.header__searchIcon{
-    padding:5px;
-    height:22px !important;
+
+.header__searchIcon {
+    padding: 5px;
+    height: 22px !important;
     background-color: #cd9042;
 }
-.header__searchInput{
-    height:12px;
+
+.header__searchInput {
+    height: 12px;
     padding: 10px;
     border: none;
     width: 100%;
 }
-.header__nav{
+
+.header__nav {
     display: flex;
     justify-content: space-evenly;
 }
-.header__option{
+
+.header__option {
     display: flex;
     flex-direction: column;
     margin-left: 10px;
     margin-right: 10px;
     color: white;
+    cursor: pointer; /* Add pointer cursor on hover for better usability */
+    transition: color 0.3s ease; /* Smooth color transition on hover */
 }
-.header__optionLineOne{
-    font-size: 10px;
+
+.header__option:hover {
+    color: #cd9042; /* Change the color on hover */
 }
-.header__optionLineTwo{
-    font-size: 13px;
+
+.header__optionLineOne {
+    font-size: 12px;
+    opacity: 0.8; /* Adjust the opacity for a subtle effect */
+}
+
+.header__optionLineTwo {
+    font-size: 14px;
     font-weight: 800;
+    letter-spacing: 0.5px; /* Add some letter-spacing for better readability */
 }
-.header__optionBasket{
-    display:flex;
+
+.header__optionBasket {
+    display: flex;
     align-items: center;
     color: white;
+    cursor: pointer; /* Add pointer cursor on hover for better usability */
+    transition: color 0.3s ease; /* Smooth color transition on hover */
 }
-.header__basketCount{
+
+.header__optionBasket:hover {
+    color: #cd9042; /* Change the color on hover */
+}
+
+.header__basketCount {
     margin-left: 10px;
     margin-right: 10px;
 }

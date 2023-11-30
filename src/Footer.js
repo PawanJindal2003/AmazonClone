@@ -43,7 +43,7 @@ function Footer() {
       <div>
         <img
           className="amazon__logo"
-          src="https://pngimg.com/d/amazon_PNG11.png"
+          src="/footerLogo.png"
           alt=""
         />
         <div className="countries">
@@ -62,8 +62,107 @@ function Footer() {
           <p>Spain</p>
           <p>Turkey</p>
           <p>United Arab Emirates</p>
-          <p>United Kingdom</p>
-          <p>United States</p>
+          <p className="countries__lineTwo">United Kingdom</p>
+          <p className="countries__lineTwo">United States</p>
+        </div>
+      </div>
+      <div className="moreOnAmazon">
+        <table>
+          <tbody>
+            <tr className="upper__tr">
+              <td>
+                <a href="">AbeBooks</a>
+                <br />
+                <span>
+                  Books, art
+                  <br />
+                  &Collectibles
+                </span>
+              </td>
+
+              <td>
+                <a href=""> Amazon Web Services</a>
+                <br />
+                <span>
+                  Scalable Cloud
+                  <br />
+                  Computing Services
+                </span>
+              </td>
+
+              <td>
+                <a href="">Audible</a>
+                <br />
+                <span>
+                  Download
+                  <br />
+                  Audio Books
+                </span>
+              </td>
+
+              <td>
+                <a href="">IMDb</a>
+                <br />
+                <span>
+                  Movies, TV
+                  <br />& Celebrities
+                </span>
+              </td>
+            </tr>
+
+            <tr className="lower__tr">
+              <td>
+                <a href="">Shopbop</a>
+                <br />
+                <span>
+                  Designer
+                  <br />
+                  Fashion Brands
+                </span>
+              </td>
+
+              <td>
+                <a href="">Amazon Business</a>
+                <br />
+                <span>
+                  Everything For
+                  <br />
+                  Your Business
+                </span>
+              </td>
+
+              <td>
+                <a href="">Prime Now</a>
+                <br />
+                <span>
+                  2-Hour Delivery
+                  <br />
+                  on Everyday Items
+                </span>
+              </td>
+
+              <td>
+                <a href="">Amazon Prime Music</a>
+                <br />
+                <span>
+                  100 million songs, ad-free
+                  <br />
+                  Over 15 million podcast episodes
+                </span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div className="copyright">
+        <div class="copyright__line1">
+          <h6>
+            Conditions of Use & Sale | Privacy Notice | Interest-Based Ads
+          </h6>
+        </div>
+
+        <div class="copyright__line2">
+          <h6>© 1996-2023, Amazon.com, Inc. or its affiliates</h6>
         </div>
       </div>
     </div>
