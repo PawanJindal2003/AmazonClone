@@ -43,7 +43,7 @@ function Footer() {
       <div>
         <img
           className="amazon__logo"
-          src="/footerLogo.png"
+          src="https://pngimg.com/d/amazon_PNG11.png"
           alt=""
         />
         <div className="countries">

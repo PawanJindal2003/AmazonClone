@@ -35,7 +35,7 @@ function Login() {
   return (
     <div className="login">
       <Link to="/">
-      <img className="login__logo" src="/loginLogo.png" alt="Black Logo" />
+      <img className="login__logo" src="https://images.crowdspring.com/blog/wp-content/uploads/2023/07/03162944/amazon-logo-1.png" alt="Black Logo" />
       </Link>
 
       <div className="login__container">
@@ -83,7 +83,7 @@ function Login() {
         </div>
 
         <div class="login__copyright__line2">
-          <h6>© 1996-2023, Ruby13.com, Inc. or its affiliates</h6>
+          <h6>© 1996-2023, Amazon.com, Inc. or its affiliates</h6>
         </div>
       </div>
     </div>

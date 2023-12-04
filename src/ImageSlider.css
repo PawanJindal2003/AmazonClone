@@ -1,0 +1,58 @@
+/* ImageSlider.css */
+
+/* Styles for the slider container */
+.slider-container {
+  position: relative;
+  margin-top: 100px;
+  width: 100%;
+  height: 100%;
+}
+
+/* Styles for the slide */
+.slide {
+
+  background-size: cover;
+  height: 100%;
+  padding: 25%;
+  margin-top: -100px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Styles for the right arrow */
+.right-arrow {
+  position: absolute;
+  top: 10%;
+  transform: translate(0, -50%);
+  right: 32px;
+  font-size: 45px;
+  color: #fff;
+  z-index: 1;
+  cursor: pointer;
+}
+
+/* Styles for the left arrow */
+.left-arrow {
+  position: absolute;
+  top: 10%;
+  transform: translate(0, -50%);
+  left: 32px;
+  font-size: 45px;
+  color: #fff;
+  z-index: 1;
+  cursor: pointer;
+}
+
+/* Styles for the dots container */
+.dots-container {
+  display: flex;
+  justify-content: center;
+  margin-top: -20px;
+}
+
+/* Styles for the individual dot */
+.dot {
+  margin: 0 3px; /* Adjusted margin value */
+  cursor: pointer;
+  font-size: 20px;
+}
